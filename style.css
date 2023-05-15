@@ -1,0 +1,117 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    color: inherit;
+}
+main{
+    height: 100vh;
+    background-color: #ececec;
+    display: grid;
+    place-content: center;
+}
+section{
+    min-width: 250px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 15px #263139;
+}
+.screen{
+    padding: 15px;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #263139;
+    opacity: 0.9;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+nav h1{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+nav h1 + span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2.5px;
+    cursor: pointer;
+}
+nav h1 + span span{
+    width: 3.5px;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 50%;
+    display: block;
+}
+.process{
+    min-height: 52px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.process .old{
+    opacity: 0.7;
+}
+.process + span{
+    display: block;
+    width: 15%;
+    height: 3px;
+    background-color: #ececec;
+    border-radius: 2px;
+    opacity: 0.7;
+}
+.inputs{
+    background-color: #263139;
+    height: 100%;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,50px);
+    gap: 5px;
+}
+.inputs button{
+    all: unset;
+    display: grid;
+    place-content: center;
+    font-weight: 700;
+    cursor: pointer;
+    border-radius: 50%;
+    margin: 7px;
+
+    transition: 0.3s;
+}
+.inputs button[data-operator]{
+    background-color: #ececec;
+    color: #263139;
+}
+
+.inputs button[data-equal]{
+    background-color: #f16535;
+    grid-column: span 2;
+    border-radius: 10px;
+}
+.inputs button[data-equal]:hover{
+    background-color: #aa4625;
+
+}
+.inputs button:not([data-equal]):hover{
+    background-color: #ececec;
+    color: #263139;
+}
+.inputs button[data-operator]:hover{
+    background-color: #263139;
+    color: white;
+}
